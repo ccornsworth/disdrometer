@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'disdrometer'
-copyright = '2026, Cory Law. Based on work by Reagan McKinney (2022)'
-author = 'Cory Law'
+author = 'Cory Law, Cosmo Pearson-Young, Jessie Chen'
+copyright = '2026, Cory Law, Cosmo Pearson-Young, Jessie Chen'
 
 # The full version, including alpha/beta/rc tags
 release = '2026'
@@ -42,7 +42,7 @@ extensions = [
 ]
 
 nbsphinx_allow_errors = True
-# Idk Chris told me this would enable math equations - stay tuned
+
 myst_enable_extensions = [
     "amsmath",
     "colon_fence",
@@ -78,14 +78,15 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_book_theme'
+html_theme = 'shibuya'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-html_logo = 'pics/ramp_on_roof.jpg'
+html_logo = 'pics/logo_wfrt.png'
 html_theme_options = {
     'logo_only': True,
     'display_version': False,
+    'accent_color': "indigo",
 }

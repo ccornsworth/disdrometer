@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /workspaces/disdrometer/docs
 jupyter nbconvert --execute --inplace source/data.ipynb
-make html
+make clean html
 git add .
 git commit -m "Data Updated"
 git push origin main

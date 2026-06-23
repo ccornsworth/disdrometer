@@ -3,9 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to the WFRT Air Quality data display!
+WFRT Parsivel Disdrometer Data
 ==============================================
-
 
 .. toctree::
    :maxdepth: 2
@@ -13,11 +12,3 @@ Welcome to the WFRT Air Quality data display!
    
    intro.md
    Data Graphs <data.ipynb>
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

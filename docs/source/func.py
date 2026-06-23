@@ -8,7 +8,7 @@ def run():
     import os.path
     from datetime import date, timedelta
 
-    def parse_ramp_file(filepath):
+    def parse_disdro_file(filepath):
         rows = []
         with open(filepath, 'r') as f:
             for line in f:
@@ -28,7 +28,7 @@ def run():
         return df
 
     today = date.today()
-    print("Today is " + today.strftime("%Y-%m-%d") + ".")
+    print("Date: " + today.strftime("%Y-%m-%d"))
     hist = today - timedelta(days=7)
 
     head = ["DATE", "CO", "NO", "NO2", "O3", "PM1.0", "PM2.5", "PM10"]
@@ -41,7 +41,7 @@ def run():
             url = link + hist.strftime("%Y-%m-%d") + "-" + station + ".txt"
             dir = os.path.expanduser("./data")
             dat = wget.download(url, out=dir)
-            df = parse_ramp_file(dat)
+            df = parse_disdro_file(dat)
             week_dat = pd.concat([week_dat, df], ignore_index=True)
             hist = hist + timedelta(days=1)
         except Exception as e:
